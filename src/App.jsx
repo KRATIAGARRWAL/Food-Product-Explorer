@@ -1,5 +1,17 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+// import Footer from "./common/Footbar";
+import Navbar from "./common/Navbar";
+import Footer from "./common/Footbar";
+
 const App=()=>{
-    return (<h1>App.jsx file checking</h1>
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Navbar />} />
+
+            </Routes>
+            <Footer/>
+        </Router>
     )
 }
 
