@@ -1,20 +1,22 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-// import Footer from "./common/Footbar";
-import Navbar from "./common/Navbar";
-import Footer from "./common/Footbar";
-import Home from "./pages/homepage";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ProductProvider } from './context/ProductContext';
+import MainLayout from './components/layout/MainLayout';
+import HomePage from './pages/HomePage';
+import ProductDetailPage from './pages/ProductDetailPage';
 
-const App=()=>{
-    return (
-        <Router>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home/>} />
-
-            </Routes>
-            <Footer/>
-        </Router>
-    )
+function App() {
+  return (
+    <Router>
+      <ProductProvider>
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/product/:barcode" element={<ProductDetailPage />} />
+          </Routes>
+        </MainLayout>
+      </ProductProvider>
+    </Router>
+  );
 }
 
 export default App;

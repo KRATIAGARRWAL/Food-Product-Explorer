@@ -1,4 +1,3 @@
-
 import { useRef, useCallback } from 'react';
 import ProductCard from './ProductCard';
 import { useProductContext } from '../../context/ProductContext';
