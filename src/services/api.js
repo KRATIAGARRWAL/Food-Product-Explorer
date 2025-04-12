@@ -12,7 +12,7 @@ export const fetchProducts = async (page = 1, pageSize = 20) => {
     }
   };
 
-  
+
 export const searchProductsByName = async (query, page = 1, pageSize = 20) => {
     try {
       const response = await fetch(`${BASE_URL}/cgi/search.pl?search_terms=${encodeURIComponent(query)}&page_size=${pageSize}&page=${page}&json=true`);
@@ -23,3 +23,16 @@ export const searchProductsByName = async (query, page = 1, pageSize = 20) => {
       throw error;
     }
   };
+
+  
+export const getProductByBarcode = async (barcode) => {
+    try {
+      const response = await fetch(`${BASE_URL}/api/v0/product/${barcode}.json`);
+      if (!response.ok) throw new Error('Failed to fetch product');
+      return response.json();
+    } catch (error) {
+      console.error('Error fetching product by barcode:', error);
+      throw error;
+    }
+  };
+  
