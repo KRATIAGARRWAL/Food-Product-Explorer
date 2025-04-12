@@ -1,4 +1,3 @@
-// src/components/products/SearchBar.jsx
 import { useState } from 'react';
 import { useProductContext } from '../../context/ProductContext';
 import { getProductByBarcode } from '../../services/api';
@@ -16,7 +15,7 @@ const SearchBar = () => {
     e.preventDefault();
     setErrorMsg('');
     
-    if (!searchInput.trim()) return;
+    // if (!searchInput.trim()) return;
     
     if (searchType === 'name') {
       handleSearch(searchInput);
