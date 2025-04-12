@@ -59,7 +59,6 @@ export const fetchProductsByCategory = async (category, page = 1, pageSize = 20)
   
 export const fetchCategories = async () => {
     try {
-      // Use the search endpoint with facets to get category information
       const response = await fetch(`${BASE_URL}/cgi/search.pl?action=process&tagtype_0=categories&page_size=0&json=true`);
       
       if (!response.ok) {
@@ -68,15 +67,15 @@ export const fetchCategories = async () => {
       
       const data = await response.json();
       
-      // Check if the facets data contains categories
+      
       if (data && data.facets) {
-        // Find the categories facet
+        
         const categoriesFacet = data.facets.find(facet => facet.id === 'categories');
         
         if (categoriesFacet && Array.isArray(categoriesFacet.tags)) {
-          // Transform the tags into our expected format
+         
           const categories = categoriesFacet.tags
-            .filter(tag => tag.count > 100) // Only include categories with significant number of products
+            .filter(tag => tag.count > 100) 
             .map(tag => ({
               id: tag.id,
               name: tag.name,
@@ -87,7 +86,7 @@ export const fetchCategories = async () => {
         }
       }
       
-      // Fallback to hardcoded categories if we can't get data from API
+      
       return { 
         tags: [
           { id: 'beverages', name: 'Beverages', products: 1000 },
