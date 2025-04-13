@@ -27,6 +27,19 @@ A **React-based web application** that allows users to **search**, **filter**, a
 
 ---
 
+
+⏱️ Time Taken
+Approximately 15 hours to complete this project:
+
+Setting up the project structure: 1 hour
+Implementing the API integration: 3 hours
+Building the UI components: 6 hours
+Implementing filtering and sorting functionality: 2 hours
+Creating the product detail page: 2 hours
+Testing and bug fixes: 1 hour\
+
+---
+
 ## 🔧 Setup and Installation
 
 ## To run the project locally:
