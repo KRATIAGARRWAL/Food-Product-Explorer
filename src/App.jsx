@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ProductProvider } from './context/ProductContext';
 import HomePage from './pages/HomePage';
 import ProductDetailPage from './pages/ProductDetailPage';
-import Navbar from './common/Navbar';
-import Footer from './common/Footbar';
+import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footbar';
 
 function App() {
   return (
