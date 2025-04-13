@@ -29,26 +29,20 @@ A **React-based web application** that allows users to **search**, **filter**, a
 
 ## 🔧 Setup and Installation
 
-To run the project locally:
+## To run the project locally:
 
+### 1. Clone the repository
 
-1. **Clone the repository**  
+```bash
+git clone https://github.com/KRATIAGARRWAL/Food-Product-Explorer.git
+cd Food-Product-Explorer
 
- ```bash
-git clone https://github.com/yourusername/food-product-explorer.git
-cd food-product-explorer
+2. Install dependencies
 
-
-2. **nstall dependencies**
-
- ```bash
 npm install
 
+3. Start the development server
 
-3. **Start the development server**
-
- ```bash
 npm run dev
-
 
 Open http://localhost:5173 in your browser.
