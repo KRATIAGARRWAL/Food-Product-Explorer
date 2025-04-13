@@ -1,19 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ProductProvider } from './context/ProductContext';
-import MainLayout from './components/layout/MainLayout';
 import HomePage from './pages/HomePage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import Navbar from './common/Navbar';
+import Footer from './common/Footbar';
 
 function App() {
   return (
     <Router>
       <ProductProvider>
-        <MainLayout>
+         <Navbar/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:barcode" element={<ProductDetailPage />} />
           </Routes>
-        </MainLayout>
+        <Footer/>
       </ProductProvider>
     </Router>
   );
