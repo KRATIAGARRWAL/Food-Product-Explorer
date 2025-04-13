@@ -6,8 +6,6 @@ import { useProductContext } from '../context/ProductContext';
 
 const HomePage = () => {
   const { searchQuery, selectedCategory } = useProductContext();
-  
-  // Determine the page title based on search and filters
   const getPageTitle = () => {
     if (searchQuery) {
       return `Search results for "${searchQuery}"`;
