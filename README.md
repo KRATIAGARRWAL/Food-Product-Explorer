@@ -35,14 +35,19 @@ A **React-based web application** that allows users to **search**, **filter**, a
 
 ```bash
 git clone https://github.com/KRATIAGARRWAL/Food-Product-Explorer.git
-cd Food-Product-Explorer
+cd Food-Product-Explorer 
+```
 
-2. Install dependencies
+### 2. Install dependencies
 
-npm install
+```bash
+npm install 
+```
 
-3. Start the development server
+### 3. Start the development server
 
+```bash
 npm run dev
+```
 
-Open http://localhost:5173 in your browser.
+### 4. Open http://localhost:5173 in your browser.
